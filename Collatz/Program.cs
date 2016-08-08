@@ -25,8 +25,6 @@ namespace Collatz
             i = long.MaxValue-1;
             list.Add(i);
 
-
-
             sw.Start();
             for (int k = 0; k < 10; k++)
             {
