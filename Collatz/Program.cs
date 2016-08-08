@@ -48,13 +48,17 @@ namespace Collatz
             {
                 Console.WriteLine(number);
             }
-            Console.WriteLine(milliseconds/10 + " " + list.Count);
+            Console.WriteLine(milliseconds/10);
             Console.Read();
         }
 
         long Calc_Collatz(long i)
         {
-            if(i==1)
+            if(i%2==1)
+            {
+                return ((3 * i) + 1) / 2;
+            }
+            else if (i==1)
             {
                 return 1;
             }
