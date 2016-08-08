@@ -58,17 +58,13 @@ namespace Collatz
             {
                 return ((3 * i) + 1) / 2;
             }
-            else if (i==1)
-            {
-                return 1;
-            }
             else if((i&1) == 0)
             {
                 return i / 2;
             }
             else
             {
-                return (3 * i) + 1;
+                return 1;
             }
         }
     }
