@@ -54,7 +54,7 @@ namespace Collatz
 
         int Calc_Collatz(int i)
         {
-            if(i%2==1)
+            if((i&1)!=0)
             {
                 return ((3 * i) + 1) / 2;
             }
@@ -62,7 +62,7 @@ namespace Collatz
             {
                 return 1;
             }
-            else if(i%2 == 0)
+            else if((i&1) == 0)
             {
                 return i / 2;
             }
