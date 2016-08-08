@@ -10,8 +10,8 @@ namespace Collatz
 {
     class Program
     {
-        List<long> list;
-        long i;
+        List<int> list;
+        int i;
         Stopwatch sw;
         static void Main(string[] args)
         {
@@ -21,14 +21,14 @@ namespace Collatz
         Program()
         {
             Stopwatch sw = new Stopwatch();
-            list = new List<long>();
-            i = long.MaxValue-1;
+            list = new List<int>();
+            i = int.MaxValue-1;
             list.Add(i);
 
             sw.Start();
             for (int k = 0; k < 10; k++)
             {
-                for (long j = 1; j < 100000; j++)
+                for (int j = 1; j < 100000; j++)
                 {
                     i = j;
                     while (i != 1)
@@ -52,7 +52,7 @@ namespace Collatz
             Console.Read();
         }
 
-        long Calc_Collatz(long i)
+        int Calc_Collatz(int i)
         {
             if(i%2==1)
             {
